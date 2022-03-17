@@ -13,7 +13,7 @@ def pyanywhere_requester(url):
     out = re.findall(regex_command, res)
     # print(out[0].strip())
     try:
-        out = out[0].replace(r"\r", "").replace(r"\n","").replace('\\"', '"').replace(r"\t", "")
+        out = out[0].replace(r"\r", "").replace(r"\n","").replace('\\"', '"').replace(r"\t", "").replace(": true", ": True").replace(":true", ":True")
         # print(out)
         return str(out)
     except:
